@@ -1,5 +1,3 @@
-package btree;
-
 import java.util.Map;
 import java.util.HashMap;
 
@@ -79,6 +77,11 @@ public class Node {
 	public Node rightChild() {
 		return this.children.get(this.numberOfElements-1)
 							.get(this.numberOfElements-1);
+	}
+
+	// Useful functions
+	public Boolean isLeaf() {
+		return children.isEmpty();
 	}
 
 
